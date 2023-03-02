@@ -2,8 +2,6 @@ package com.company.diamonds.logic;
 
 import com.company.diamonds.ui.OutputInterface;
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * This is where the logic of this App is centralized for this assignment.
  * <p>
@@ -46,39 +44,9 @@ public class Logic
      * on-screen button labeled 'Process...' is pressed.
      */
     public void process(int size) {
-        boolean flag = false;
-        String inside;
-        mOut.println('+'+StringUtils.repeat("-",size*2)+'+');
-        for (int i=size; i>0; i--) {
-            if (flag==true){
-                break;
-            }
-            if ((i-size)%2==0) {
-                inside="=";
-            }
-            else {
-                inside="-";
-            }
-            if (i!=1){
-                mOut.println('|'+StringUtils.repeat(" ", i-1)+'/'+StringUtils.repeat(inside, ((i-size)*(-1))*2)+'\\'+StringUtils.repeat(" ", i-1)+'|');
-            }
-            else{
-                mOut.println("|<"+StringUtils.repeat(inside, (size*2)-2)+">|");
-                while (i!=size){
-                    if ((size-i)%2==0){
-                        inside="--";
-                    }
-                    else{
-                        inside="==";
-                    }
-                    mOut.println('|'+StringUtils.repeat(" ", i)+'\\'+StringUtils.repeat(inside, size-1-i)+'/'+StringUtils.repeat(" ", i)+'|');
-                    i++;
-                    if (i==size){
-                        flag = true;
-                    }
-                }
-            }
-        }
-        mOut.println('+'+StringUtils.repeat("-",size*2)+'+');
+
+        // TODO -- add your code here
+
     }
+
 }
